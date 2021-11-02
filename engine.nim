@@ -4,7 +4,7 @@ import
   scenes/projects
 
 
-Window("Nodengine", 720, 480)
+Window("Nodengine", 1024, 640)
 setIcon("assets/icon.png")
 
 

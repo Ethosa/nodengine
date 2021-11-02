@@ -1,16 +1,26 @@
 # author: Ethosa
-import nodesnim
-import project_template
+import
+  nodesnim,
+  project_template
 
 
 build:
   - Scene (projects_scene):
     - Scroll scroll:
-      call setBackgroundColor(Color("#3c345c"))
+      call setBackgroundColor(Color("#211E2D"))
       call setSizeAnchor(1, 1)
       - VBox list:
-        call resize(720, 480)
+        separator: 12
+        call resize(1024, 640)
         call addChild(project)
+
+        @onReady():
+          self.addChild(addProject("hello, world!"))
+          self.addChild(addProject("third project"))
+          self.addChild(addProject("my own project"))
+          self.addChild(addProject("shit app"))
+          self.addChild(addProject("shit game"))
+          self.addChild(addProject("what is it?"))
 
       @onReady():
         scroll.viewport_w = list.rect_size.x
